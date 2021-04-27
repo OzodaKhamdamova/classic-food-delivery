@@ -103,7 +103,7 @@ body{
     height: 33px;
     transition: ease 0.2s;
 }
-.ad{
+.intro{
     position: relative;
     background-image: url("images/vegitable.png");
     background-color: #F0F5FB;
@@ -113,16 +113,16 @@ body{
     padding-bottom: 260px;
     height: 516px;
 }
-.ad-background{
+.intro-background{
     background-color: #F0F5FB;
 }
-.ad-wrapper{
+.intro-wrapper{
     
     position: relative;
     margin: 0 auto;
 }
 
-.ad-heading{
+.intro-heading{
     margin: 0;
     margin-bottom: 18px;
     padding: 0;
@@ -132,7 +132,7 @@ body{
     line-height: 59px;
     text-align: center;
 }
-.ad-paragraph{
+.intro-paragraph{
     max-width: 622px;
     margin: 0 auto;
     padding: 0;
@@ -151,11 +151,11 @@ body{
     max-width: 200px;
     text-align: right;
 }
-.ad-span{
+.intro-span{
     color: #F87848;
     font-weight: 600;
 }
-.ad-img{
+.intro-img{
     position: absolute;
     top: 90px;
     left: 250px;
