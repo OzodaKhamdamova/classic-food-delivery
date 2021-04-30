@@ -26,7 +26,14 @@
     src: url("../fonts/montserrat-v15-latin-700.woff2") format("woff2"),
          url("../fonts/montserrat-v15-latin-700.woff") format("woff");
   }
-
+html{
+    box-sizing: border-box;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
 :root {
     --font-family: "Montserrat", "Arial", sans-serif;
 }
@@ -36,6 +43,7 @@ body{
     font-size: 16px;
     line-height: 20px;
 }
+
 .container{
     max-width: 1161px;
     margin: 0 auto;
@@ -106,11 +114,12 @@ body{
 .intro{
     position: relative;
     background-image: url("images/vegitable.png");
-    background-color: #F0F5FB;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-position: center 125px,
+    center bottom;
+    background-color: #F0F5FB;
     margin: 0 auto;
-    padding-bottom: 260px;
+    padding-bottom: 700px;
     height: 516px;
 }
 .intro-background{
@@ -153,11 +162,12 @@ body{
 }
 .intro-span{
     color: #F87848;
+    top: -400px;
     font-weight: 600;
 }
 .intro-img{
     position: absolute;
-    top: 90px;
+   
     left: 250px;
   
 }
@@ -184,4 +194,322 @@ body{
     position: absolute;
     top: -40px;
     right: -130px;
+}
+.offer{
+   
+    margin-bottom: -47px;
+}
+.offer__container{
+    padding-right: 15px;
+    text-align: right;
+}
+.offer__link{
+    display: inline-block;
+    text-decoration: none;
+}
+.offer__img{
+    display: inline-block;
+}
+.popular-dishes__container{
+    background-image: url('images/popular-dish-bg-img.png');
+    background-repeat: no-repeat;
+    background-position: 0 -10px;
+    background-size:1440px 1310px ;
+}
+.popular-dishes__title{
+    margin-top: 0;
+    margin-bottom: 49px;
+    margin-left: 105px;
+    margin-right: 105px;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    text-align: center;    
+}
+.popular-dishes__category-list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.popoular-dishes__category-item{
+    border-radius: 45px;
+    width: 145px;
+}
+.popoular-dishes__category-item:not(:last-child){
+    margin-right: 31px;
+}
+.popular-dishes__category-link{
+    display: inline-block;
+    border-radius: 45px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    padding: 16px 0;
+    width: 145px;
+    color: #151515;
+    background-color: #ECEEF6;
+}
+.popular-dishes__category-link:hover{
+    background-color: #59AAF1;
+    color: #ffffff;
+}
+.popular-dishes__category-link:active{
+    opacity: 0.8;
+    transform: scale(0.9);
+}
+.popular-dishes__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    margin-right: -40px;
+}
+.popular-dishes__item{
+    position: relative;
+    width: 260px;
+    padding: 36px 20px 0 20px;
+    border: 2px solid #ECEEF7;
+    border-radius: 15px;
+    margin-right: 40px;
+    margin-bottom: 45px;
+    background-color: #FFF;
+    z-index: 5;
+}
+.popular-dishes__item:nth-child(2) .popular-dishes__magazin{
+    background-color: #FE5626;
+}
+.popular-dishes__item:nth-child(3)::before{
+    position: absolute;
+    content: "XIT";
+    width: 60px;
+    height: 25px;
+    background: linear-gradient(117deg, #FE5626 -4%, #F26E0E 113%), #59AAF1;
+    box-shadow: 0px 4px 8px #cd472942;
+    border-radius: 3px;
+    font-weight: 600;
+    color: #ffffff;
+    text-align: center;
+    padding-top:5px ;
+    padding-bottom: 5px;
+    top: 24px;
+    left: 19px;
+}
+.popular-dishes__item::after{
+    position: absolute;
+    background-color: #FFF;
+    width: 50px;
+    height: 50px;
+    content: "";
+    border-radius: 0 0 25px 0 ;
+    border-right: 2px solid #eceef7;
+    border-bottom: 2px solid #eceef7;
+    transform: rotate(45deg);
+    bottom: -27px;
+    left: 103px;
+    z-index: -4;
+}
+.popoular-dishes__img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.popular-dishes__name-wrap{
+    display: flex;
+    align-items: center;
+}
+.popular-dishes__name{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.popular-dishes__name-wrap span{
+    display: inline-block;
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 140%;
+    margin-left: auto;
+}
+.popular-dishes__styles{
+    max-width: 220px;
+    margin-top: 0;
+    margin-bottom: 19px;
+}
+.popular-dishes__cost{
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 140%;
+    color: #151515;
+    margin-bottom: 18px;
+    margin-top: 0;
+}
+.popular-dishes__magazin{
+    background-color: #ffffff;
+    width: 33px;
+    height: 33px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #ECEEF6;
+    border-radius: 59px;
+    margin-bottom: -16px ;
+}
+.popular-dishes__magazin:hover{
+    opacity: 0.8;
+}
+.popular-dishes__magazin:active{
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+
+.popular-dishes__magazin-img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7px;
+}
+.reply-btn-wrap{
+    text-align: center;
+}
+.reply-btn{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #FE5626;
+    background-image: url("images/reply.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 25px 25px;
+    margin-bottom: 103px;
+}
+.reply-btn:hover{
+    opacity: 0.8;
+}
+.reply-btn:active{
+    opacity: 0.6;
+    transform: scale(0.9);
+}
+.instagram-blog{
+    padding: 40px 0;
+    margin-bottom: 127px;
+    background-image: url("images/instagram-bg.png");
+    background-repeat: repeat-x;
+}
+.instagram-blog__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.instagram-content{
+    padding: 20px;
+    background: linear-gradient(45.04deg, #FD9924 -51.05%, #F65B16 134.89%);
+    box-shadow: 0px 70px 90px rgba(253, 55, 36, 0.2), 0px 35px 50px rgba(253, 55, 36, 0.2), 0px 20px 25px rgba(253, 55, 36, 0.2);
+    border-radius: 15px;
+}
+.instagram-border{
+    padding: 55px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    font-size: 24px;
+    line-height: 1.2;
+}
+.instagram-text{
+    color: #fff;
+}
+.instagram-link{
+   font-weight: 700;
+   text-decoration: none;
+   color: #fff;
+}
+.form-section{
+    background-image: url("images/bg-vegetable.png"),
+                        url("images/icon-section.png");
+    background-repeat: no-repeat;
+    background-position: center 125px,
+                        center bottom;
+    background-color: #F0F5FB;
+}
+.form-section__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 85px;
+    padding-bottom: 276px; 
+    position: relative;
+}
+.form-input{
+    background: #FFFFFF;
+    border: 2px solid #ECEEF7;
+    box-sizing: border-box;
+    border-radius: 57px;
+    padding: 20px 20px 20px 30px;
+    margin-right: 40px;
+}
+.form-section__btn{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 18px 116px 18px 58px;
+    background: linear-gradient(180deg, #FE5626 0%, #F23F0E 100%), #59AAF1;
+    box-shadow: 0px 4px 8px rgba(205, 169, 41, 0.26);
+    border-radius: 59px;
+    border: none;
+    color: #fff;
+    position: relative;
+}
+.form-section__btn::after{
+    content: "";
+    position: absolute;
+    background-image: url("images/arrow.png");
+    width: 35px;
+    height: 11px;
+    right: 45px;
+}
+.form-section__title{
+    max-width: 500px;
+    margin-bottom: 42px;
+    text-align: center;
+}
+.form-section__car{
+    position: absolute;
+    top: 250px;
+    right: 280px;
+}
+input{
+    outline: 0;
+}
+.site-footer{
+    padding-top: 25px;
+
+}
+.site-footer__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo__img{
+    display: block;
+}
+.site-footer__text-bold{
+    font-weight: 700;    
+}
+.site-footer__text-bold::after{
+    content: ".";
+    width: 3px;
+    height: 3px;
+    color: #e45759;
 }
